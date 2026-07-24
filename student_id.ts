@@ -1,0 +1,34 @@
+class StudentRecord {
+
+    readonly studentUniqueId: number;
+    studentFullName: string;
+    studentBranch: string;
+
+    constructor(
+        uniqueIdValue: number,
+        fullNameValue: string,
+        branchValue: string
+    ) {
+        this.studentUniqueId = uniqueIdValue;
+        this.studentFullName = fullNameValue;
+        this.studentBranch = branchValue;
+    }
+
+    public displayStudentRecord(): void {
+        console.log("Student Details");
+        console.log(`Student ID: ${this.studentUniqueId}`);
+        console.log(`Student Name: ${this.studentFullName}`);
+        console.log(`Branch: ${this.studentBranch}`);
+    }
+}
+
+let studentInformation = new StudentRecord(
+    101,
+    "Indhrani",
+    "Artificial Intelligence and Data Science"
+);
+
+studentInformation.displayStudentRecord();
+
+// ❌ Not Allowed
+// studentInformation.studentUniqueId = 202;
